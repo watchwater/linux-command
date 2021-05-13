@@ -1,7 +1,25 @@
--/spark- 2.4.7/bin/spark-submit \
+<configuration>
+<property>
+<name>hadoop.tmp.dir</name>
+<value>/home/dase-local/hadoop-2.10.1/tmp</value>
+</property>
+<property>
+<name>fs.defaultFS</name>
+<value>hdfs://localhost:9000</value>
+</property>
+</configuration>
 
--- master local \
-
---class org. apache . spark . examples . SparkPi \
-
-~/spark-2. 4.7/examp1es/jars/spark- examples_ 2.11-2.4.7.jar
+<configuration>
+<property>
+<name>dfs.replication</name>
+<value>1</value>
+</property>
+<property>
+<name>dfs.namenode.name.dir<name>
+<value>file:/home/qing/hadoop-2.10.1/tmp/dfs/name</value>
+</property>
+<property>
+<name>dfs.datanode.data.dir</name>
+<value>file:/home/qing/hadoop-2.10.1/tmp/dfs/data</value>
+</property>
+</configuration>
